@@ -1,0 +1,16 @@
+<div class="content">
+    <div class="left" >
+        <mat-list *ngIf="myTeams.pokemons.length > 0">
+            <mat-list-item style="cursor: pointer;" 
+            (click)="onClick(p.url)" 
+            *ngFor="let p of myTeams.pokemons; last as last">
+                {{p.name | titlecase}}
+                <mat-divider *ngIf="!last"></mat-divider>
+            </mat-list-item>
+        </mat-list>
+    </div>
+    
+    <div class="right">
+        <app-detail [url]="toUrl"></app-detail>
+    </div>
+</div>

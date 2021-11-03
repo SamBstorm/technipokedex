@@ -7,6 +7,7 @@
             (click)="onClick(p.url)" 
             *ngFor="let p of pokedex.results; last as last">
                 <app-favorite-button [currentResult]="p"></app-favorite-button>
+                <app-add-to-team-button [result]="p"></app-add-to-team-button>
                 {{p.name | titlecase}}
                 <mat-divider *ngIf="!last"></mat-divider>
             </mat-list-item>

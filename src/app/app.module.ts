@@ -14,6 +14,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {HttpClientModule} from '@angular/common/http';
 import { MatDividerModule } from '@angular/material/divider';
 import { FavoriteButtonComponent } from './components/favorite-button/favorite-button.component';
+import { TeamListComponent } from './components/team-list/team-list.component';
+import { AddToTeamButtonComponent } from './components/add-to-team-button/add-to-team-button.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { FavoriteButtonComponent } from './components/favorite-button/favorite-b
     AppComponent,
     ListeComponent,
     DetailComponent,
-    FavoriteButtonComponent
+    FavoriteButtonComponent,
+    TeamListComponent,
+    AddToTeamButtonComponent
   ],
   imports: [
     BrowserModule,

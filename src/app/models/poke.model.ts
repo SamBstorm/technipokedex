@@ -20,13 +20,18 @@ export interface Pokemon {
 export interface Sprites {
     back_default : string;
     front_default : string;
-    other : any;
+    other : Other;
 }
 
 export interface Other {
-    official_artwork : OfficialNetwork
+    'official-artwork' : OfficialNetwork
 }
 
 export interface OfficialNetwork {
     front_default : string;
+}
+
+export interface PlayersTeam{
+    name : string;
+    pokemons : Result[];
 }
