@@ -1,0 +1,17 @@
+<mat-card *ngIf="pokemon">
+    <mat-card-title-group>
+        <app-favorite-button [currentResult]="{name : pokemon.name, url: resultUrl}"></app-favorite-button>
+        <mat-card-title>
+            {{ pokemon.name | uppercase }}
+        </mat-card-title>
+        <img mat-card-sm-image [src]="pokemon.sprites.front_default" >
+        <img mat-card-md-image [src]="pokemon.sprites.back_default" >
+    </mat-card-title-group>
+    <mat-card-content>
+        <p>Poids : {{ pokemon.weight }}</p>
+        <p>Taille : {{ pokemon.height }}</p>
+    </mat-card-content>
+    <mat-card-footer>
+        <img [src]="pokemon.sprites.other['official-artwork'].front_default">
+    </mat-card-footer>
+</mat-card>

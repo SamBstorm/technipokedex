@@ -1,0 +1,4 @@
+<button mat-mini-fab [color]="(isFavorite)?'warn':'primary'"(click)="toggleFavorite()">
+    <mat-icon *ngIf ="isFavorite">favorite</mat-icon>
+    <mat-icon *ngIf ="!isFavorite">favorite_border</mat-icon>
+</button>

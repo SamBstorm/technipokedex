@@ -1,0 +1,15 @@
+.content {
+    display : grid;
+}
+.left {
+    grid-column: 1/2;
+    grid-row : 1;
+}
+.right {
+    grid-column: 2/2;
+    grid-row :1 ;
+}
+
+mat-list-item:hover {
+    background-color: grey;
+}

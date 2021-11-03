@@ -1,0 +1,19 @@
+<div class="content">
+    <div class="left" >
+        <button mat-raised-button color="accent" (click)="clickPrevious()" [disabled]="!pokedex?.previous">Précédent</button>
+        <button mat-raised-button color="accent" (click)="clickNext()" [disabled]="!pokedex?.next">Suivant</button>
+        <mat-list *ngIf="pokedex">
+            <mat-list-item style="cursor: pointer;" 
+            (click)="onClick(p.url)" 
+            *ngFor="let p of pokedex.results; last as last">
+                <app-favorite-button [currentResult]="p"></app-favorite-button>
+                {{p.name | titlecase}}
+                <mat-divider *ngIf="!last"></mat-divider>
+            </mat-list-item>
+        </mat-list>
+    </div>
+    
+    <div class="right">
+        <app-detail [url]="toUrl"></app-detail>
+    </div>
+</div>
